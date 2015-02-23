@@ -108,6 +108,7 @@ path {
                 box-shadow .8s ease-out 0s;
     background-color: rgba(0,0,0,0.3);
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 #icon-bar a:first-child {
@@ -132,6 +133,12 @@ path {
 }
 #icon-bar a.blue:hover path {
     fill: #00c;
+}
+#icon-bar a.purple:hover path {
+    fill: #c0c;
+}
+#icon-bar a.cyan:hover path {
+    fill: #0cc;
 }
 
 @media (max-width: 720px) {
