@@ -57,6 +57,12 @@ body {
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     color: #fff;
     text-align: center;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 a {
@@ -77,11 +83,10 @@ h2 {
     position: absolute;
     width: 720px;
     min-width: 250px;
-    height: 300px;
     top: 50%;
     left: 50%;
     margin-left: -360px;
-    margin-top: -130px;
+    transform: translateY(-50%);
 }
 
 #icon-bar {
