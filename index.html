@@ -56,6 +56,26 @@ d="M 42.75,37.875 C 42.280997,38.977354 41.226614,39.830832 40.705343,41.007657 
             ].join('');
 
         document.body.style.backgroundImage = path;
+
+
+        var mouseOver = false;
+        document.getElementById("icon-bar").onmouseout = function() { mouseOver = false; };
+        document.getElementById("icon-bar").onmouseover = function() { mouseOver = true; };
+
+        function animateButtons() {
+            [].forEach.call(document.querySelectorAll("#icon-bar a"), function(elm, i) {
+                    setTimeout(function() { elm.classList.add("hover"); }, (i*100));
+                    setTimeout(function() { elm.classList.remove("hover"); }, ((i+1)*100) + 1000);
+            });
+        }
+
+        function randomAnimate() {
+            if(!mouseOver) animateButtons();
+
+            setTimeout(randomAnimate, (10 + Math.round(Math.random() * 20)) * 1000);
+        }
+
+        setTimeout(randomAnimate, 500);
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
